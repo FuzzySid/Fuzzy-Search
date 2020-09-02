@@ -9,19 +9,16 @@ function App() {
     <div className="app">
       <Router>
         <Switch>
+          <Route path="/search">
+             {/* Search Results  */}
+             <h1>Search</h1>
+          </Route>
           <Route path="/">
               {/* Home */}
               <Home/>
           </Route>
-          <Route path="/search">
-             {/* Search Results  */}
-          </Route>
         </Switch>
-      </Router>
-        <h1>Fuzzy Search</h1>
-
-
-       
+      </Router>     
     </div>
   );
 }
