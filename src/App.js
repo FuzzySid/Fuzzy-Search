@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Home } from './pages/Home';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { Results } from './pages/Results';
 
 function App() {
   return (
@@ -10,11 +11,9 @@ function App() {
       <Router>
         <Switch>
           <Route path="/search">
-             {/* Search Results  */}
-             <h1>Search</h1>
+             <Results/>
           </Route>
           <Route path="/">
-              {/* Home */}
               <Home/>
           </Route>
         </Switch>
