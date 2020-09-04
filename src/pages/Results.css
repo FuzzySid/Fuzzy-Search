@@ -56,3 +56,43 @@
 .results__option a{
     margin-left: 5px;
 }
+
+.results__allResults{
+    max-width: 650px;
+    margin-top: 20px;
+    margin-left: 240px;
+    margin-bottom: 50px;
+}
+
+.results__resultCount{
+    margin-left: 240px;
+    color:#70757a;
+    font-size: 14px;
+}
+
+.results__searchResults{
+    margin: 40px 0;
+}
+
+.results__resultTitle{
+    text-decoration: none;
+}
+
+.results__resultTitle:hover{
+    text-decoration: underline;
+}
+
+.results__resultTitle > h2{
+    font-weight: 500;
+}
+
+.results__resultSnippet{
+    margin-top: 10px;
+}
+
+.results__resultImage{
+    object-fit: contain;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
