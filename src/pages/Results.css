@@ -21,3 +21,38 @@
     margin: unset;
     max-width: unset;
 }
+
+.results__options{
+    display: flex;
+    align-items: center;
+    color: grey;
+    margin-top: 20px;
+}
+
+.results__optionsLeft,.results__optionsRight{
+    display: flex;
+}
+
+.results__options a,
+.results__optionsRight a{
+    text-decoration: none;
+    color: gray;
+}
+
+/* .results__optionsLeft{
+    margin-left: 10px;
+} */
+
+.results__optionsRight{
+    margin-left: 80px;
+}
+
+.results__option{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.results__option a{
+    margin-left: 5px;
+}
