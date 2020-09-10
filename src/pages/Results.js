@@ -16,10 +16,10 @@ export const Results = () => {
     const [{term='tesla'},]=useStateValue();
 
     //LIVE API Call, don't use this for local development
-    const { data }=useGoogleSearch(term)
+    // const { data }=useGoogleSearch(term)
 
     //Mock API Call
-    //const data=Response;
+    const data=Response;
 
     console.log(data)
     return (

@@ -1,9 +1,11 @@
 export const initialState={
-    term:null
+    term:null,
+    theme:'light'
 }
 
 export const actionTypes={
-    SET_SEARCH_TERM: "SET_SEARCH_TERM"
+    SET_SEARCH_TERM: "SET_SEARCH_TERM",
+    TOGGLE_THEME:"TOGGLE_THEME"
 }
 
 const reducer=(state,action)=>{
@@ -13,7 +15,13 @@ const reducer=(state,action)=>{
                                                 ...state,
                                                 term:action.term
                                             }
+        case actionTypes.TOGGLE_THEME:   return{
+                                                ...state,
+                                                theme:state.theme==='light' ? 'dark' : 'light'
+                                            }
+
                                   default:  return state;
+
     }
 }
 

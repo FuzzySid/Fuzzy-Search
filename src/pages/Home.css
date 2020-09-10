@@ -1,7 +1,12 @@
+
+.container__home{
+        height: 100vh;
+        background: #f3f4f5; /* Theme variable */
+}
+
 .home{
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 
 .home__header{
@@ -32,8 +37,17 @@
 .home__body{
     flex: 1;
     display: flex;
-    margin-top: 10%;
+    margin-top: 3%;
     flex-direction: column;
     text-align: center;
 }
 
+.home__body > h1{
+    font-weight: 1000;
+    font-size: 64px;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0px;
+}
