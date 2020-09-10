@@ -16,7 +16,7 @@
     padding: 10px 20px;
     font-size: medium;
     border: none;
-    background: #f3f4f5;  /* Theme variable */
+    /* background: #f3f4f5;  Theme variable */
 }
 
 .search__input > input:focus {

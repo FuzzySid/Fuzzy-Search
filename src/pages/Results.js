@@ -11,10 +11,14 @@ import ImageIcon from '@material-ui/icons/Image';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import RoomIcon from '@material-ui/icons/Room';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import { ThemeSwitch } from '../components/ThemeSwitch';
+import Theme from './../themes';
+
 
 export const Results = () => {
     const [{term='tesla'},]=useStateValue();
-
+    const [state,]=useStateValue();
+    const theme=Theme[state.theme]
     //LIVE API Call, don't use this for local development
     // const { data }=useGoogleSearch(term)
 
@@ -23,50 +27,17 @@ export const Results = () => {
 
     console.log(data)
     return (
-        <div className="results">
-             <div className="results__header">
+        <div className="results" style={{backgroundColor:theme.backgroundColor}}>
+             <div className="results__header" style={{backgroundColor:theme.backgroundColor}}>
                 <Link to="/">
                     <h1 className="results__headerTitle">Fuzzy Search</h1>
                 </Link>
                 <div className="results__headerBody">
-                    <Search hideButtons />
-                    <div className="results__options">
-                        <div className="results__optionsLeft">
-                            <div className="results__option">
-                                <SearchIcon/>
-                                <Link to="/all">All</Link>
-                            </div>
-                            <div className="results__option">
-                                <DescriptionIcon/>
-                                <Link to="/news">News</Link>
-                            </div>
-                            <div className="results__option">
-                                <ImageIcon/>
-                                <Link to="/images">Images</Link>
-                            </div>
-                            <div className="results__option">
-                                <LocalOfferIcon/>
-                                <Link to="/shopping">Shopping</Link>
-                            </div>
-                            <div className="results__option">
-                                <RoomIcon/>
-                                <Link to="/maps">Maps</Link>
-                            </div>
-                            <div className="results__option">
-                                <MoreVertIcon/>
-                                <Link to="/more">more</Link>
-                            </div>
-                        </div>
-                        <div className="results__optionsRight">
-                            <div className="results__option">
-                                <Link to="/maps">Settings</Link>
-                            </div>
-                            <div className="results__option">
-                                <Link to="/more">Rools</Link>
-                            </div>
-                        </div>
-                        
-                    </div>
+                        <Search hideButtons />
+                        {/* <div className="results__headerBody__Switch">
+                            <ThemeSwitch/>  
+                        </div> */}
+                    
                 </div>
              </div>
             {

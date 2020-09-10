@@ -4,6 +4,11 @@
     color: black;
 }
 
+.results__headerBody{
+    display: flex;
+}
+
+
 .results__header{
     display: flex;
     position: sticky;
