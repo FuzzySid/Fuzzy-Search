@@ -38,7 +38,7 @@ export const Search = ({hideButtons=false}) => {
                     </div>
                 ):( 
                     <div className="search__buttons">
-                        <Button className="btn" type="submit" onClick={search} variant="contained" style={{backgroundColor:theme.color,color:theme.backgroundColor}}><FavoriteIcon color="secondary"/><span className="search__buttonsName">&nbsp;Search</span></Button>
+                        <Button className="btn" type="submit" onClick={search} variant="contained" style={{backgroundColor:theme.btnBackground,color:theme.btnColor}}><span className="search__buttonsName">&nbsp;Search</span></Button>
                     </div>
                     
                 )

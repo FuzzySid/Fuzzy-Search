@@ -30,20 +30,20 @@ export const Results = () => {
         <div className="results" style={{backgroundColor:theme.backgroundColor}}>
              <div className="results__header" style={{backgroundColor:theme.backgroundColor}}>
                 <Link to="/">
-                    <h1 className="results__headerTitle">Fuzzy Search</h1>
+                    <h1 className="results__headerTitle" style={{color:theme.color}}>Fuzzy Search</h1>
                 </Link>
                 <div className="results__headerBody">
                         <Search hideButtons />
                         {/* <div className="results__headerBody__Switch">
                             <ThemeSwitch/>  
                         </div> */}
-                    
+                        {/* <ThemeSwitch/>   */}
                 </div>
              </div>
             {
                 term && (
                     <div className="results__searchResults">
-                        <p className="results__resultCount">
+                        <p className="results__resultCount" style={{color:theme.color}}>
                             About {data?data.searchInformation.formattedTotalResults:''} results ({data?data.searchInformation.formattedSearchTime: ''} seconds) for {term?term:'tesla'}
                         </p>
                     </div>
@@ -53,7 +53,7 @@ export const Results = () => {
                 data && data.items.map(item=>
                     <div>
                         <div className="results__allResults">
-                           <a href={item.link}>
+                           <a href={item.link} style={{color:theme.color}}>
                             {
                                 item.pagemap.cse_image && item.pagemap.cse_image.length>0 && item.pagemap.cse_image[0].src &&
                                 (
@@ -62,10 +62,10 @@ export const Results = () => {
                             }
                             {item.displayLink} 
                            </a>
-                           <a href={item.link} className="results__resultTitle">
+                           <a href={item.link} target="_blank" className="results__resultTitle" style={{color:theme.color}}>
                                <h2>{item.title}</h2>
                            </a>
-                           <p className="results__resultSippet">
+                           <p className="results__resultSippet" style={{color:theme.color}}>
                                {item.snippet}
                            </p>
                         </div>

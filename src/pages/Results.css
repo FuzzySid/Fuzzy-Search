@@ -22,7 +22,7 @@
 
 .results__headerBody > .search > .search__input{
     margin-top: 0;
-    width: unset;
+    /* width: unset; */
     margin: unset;
     max-width: unset;
 }
@@ -65,12 +65,12 @@
 .results__allResults{
     max-width: 650px;
     margin-top: 20px;
-    margin-left: 240px;
+    margin-left: 270px;
     margin-bottom: 50px;
 }
 
 .results__resultCount{
-    margin-left: 240px;
+    margin-left: 270px;
     color:#70757a;
     font-size: 14px;
 }
