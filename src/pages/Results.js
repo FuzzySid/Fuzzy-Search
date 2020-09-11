@@ -20,10 +20,10 @@ export const Results = () => {
     const [state,]=useStateValue();
     const theme=Theme[state.theme]
     //LIVE API Call, don't use this for local development
-    // const { data }=useGoogleSearch(term)
+    const { data }=useGoogleSearch(term)
 
     //Mock API Call
-    const data=Response;
+    //const data=Response;
 
     console.log(data)
     return (
